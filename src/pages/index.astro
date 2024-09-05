@@ -1,6 +1,7 @@
 ---
-import TeamLayoutSingleview from "../layout/team_layout_singleview.astro";
 import TeamCard from "../components/Team_card.astro";
+import BaseLayout from "../layout/base_layout.astro";
+import "../styles/global.css";
 
 const employeeData = await fetch(
   "https://raw.githubusercontent.com/roba0001/frontend-design/main/resources/json/employees.json"
@@ -9,20 +10,10 @@ const employeeData = await fetch(
 console.log(employeeData);
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-    {
-      employeeData.map((employee) => {
-        return <TeamCard employeeData={employee} />;
-      })
-    }
-  </body>
-</html>
+<BaseLayout title="Home">
+  {
+    employeeData.map((employee) => {
+      return <TeamCard employeeData={employee} />;
+    })
+  }
+</BaseLayout>
