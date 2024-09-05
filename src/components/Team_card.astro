@@ -1,10 +1,19 @@
 ---
 const { employeeData } = Astro.props;
 console.log(employeeData);
+
+// import type { ImageMetadata } from "astro";
+// import { Image } from "astro:assets";
+
+// const { img } = Astro.props;
+
+// const images = import.meta.glob<{ default: ImageMetadata }>("/src/assets/*.{jpeg,jpg,png,gif}");
+// if (!images[img])
+//   throw new Error(`"${img}" does not exist in glob: "src/assets/images/*.{jpeg,jpg,png,gif}"`);
 ---
 
 <article>
-  <img src={employeeData.img} alt="img" />
+  <img src={employeeData.img} alt="img" format="webp" />
   <button>{employeeData.title}</button>
   <h2>{employeeData.name}</h2>
   <p>{employeeData.description}</p>

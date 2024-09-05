@@ -1,16 +1,28 @@
 ---
 import TeamCard from "../components/Team_card.astro";
+import { Icon } from "astro-icon/components";
+import BaseLayout from "../layout/base_layout.astro";
+import "../styles/global.css";
+
+const employeeData = await fetch(
+  "https://raw.githubusercontent.com/roba0001/frontend-design/main/resources/json/employees.json"
+).then((res) => res.json());
+
+console.log(employeeData);
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Team</title>
-  </head>
-  <body>
-    <h1>Team</h1>
-  </body>
-</html>
+<BaseLayout title="Team">
+  <Icon name="sheet" />
+  {
+    employeeData.map((employee) => {
+      return <TeamCard employeeData={employee} />;
+    })
+  }
+</BaseLayout>
+
+<style>
+  [data-icon="sheet"] {
+    width: 40px;
+    aspect-ratio: 1;
+  }
+</style>

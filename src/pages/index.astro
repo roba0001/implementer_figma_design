@@ -1,16 +1,17 @@
 ---
+// import { Image } from "astro:assets";
+// import daisy from "../assets/images/daisy.jpg";
 import TeamCard from "../components/Team_card.astro";
 import BaseLayout from "../layout/base_layout.astro";
 import "../styles/global.css";
-
-const employeeData = await fetch(
-  "https://raw.githubusercontent.com/roba0001/frontend-design/main/resources/json/employees.json"
-).then((res) => res.json());
-
-console.log(employeeData);
 ---
 
 <BaseLayout title="Home">
+  <!-- <Image alt="" src={daisy} format="avif" /> -->
+  <p>hej</p>
+  <a href="/team.html">Team</a>
+  <a href="/team.html">Team</a>
+
   {
     employeeData.map((employee) => {
       return <TeamCard employeeData={employee} />;
