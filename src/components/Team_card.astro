@@ -1,0 +1,11 @@
+---
+const { employeeData } = Astro.props;
+console.log(employeeData);
+---
+
+<article>
+  <img src={employeeData.img} alt="img" />
+  <button>{employeeData.title}</button>
+  <h2>{employeeData.name}</h2>
+  <p>{employeeData.description}</p>
+</article>
