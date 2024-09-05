@@ -1,0 +1,11 @@
+---
+const coreValues = await fetch(
+  "https://raw.githubusercontent.com/roba0001/frontend-design/main/resources/json/corevalues.json"
+).then((res) => res.json());
+
+console.log(coreValues);
+
+import BaseLayout from "../layout/base_layout.astro";
+---
+
+<BaseLayout />

@@ -1,6 +1,5 @@
 ---
 const { employeeData } = Astro.props;
-console.log(employeeData);
 
 // import type { ImageMetadata } from "astro";
 // import { Image } from "astro:assets";
@@ -18,3 +17,9 @@ console.log(employeeData);
   <h2>{employeeData.name}</h2>
   <p>{employeeData.description}</p>
 </article>
+
+<style>
+  xxx article {
+    display: grid;
+  }
+</style>

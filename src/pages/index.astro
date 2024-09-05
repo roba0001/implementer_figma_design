@@ -1,20 +1,22 @@
 ---
 // import { Image } from "astro:assets";
 // import daisy from "../assets/images/daisy.jpg";
+import CoreValueCard from "../components/CoreValue_card.astro";
 import TeamCard from "../components/Team_card.astro";
 import BaseLayout from "../layout/base_layout.astro";
 import "../styles/global.css";
+
+const employeeData = await fetch(
+  "https://raw.githubusercontent.com/roba0001/frontend-design/main/resources/json/employees.json"
+).then((res) => res.json());
+
+const firstThreeEmployees = employeeData.slice(0, 3);
 ---
 
 <BaseLayout title="Home">
   <!-- <Image alt="" src={daisy} format="avif" /> -->
-  <p>hej</p>
-  <a href="/team.html">Team</a>
-  <a href="/team.html">Team</a>
+  <p>hej dette er index</p>
 
-  {
-    employeeData.map((employee) => {
-      return <TeamCard employeeData={employee} />;
-    })
-  }
+  <a href="/team.html">Team</a>
+  <!-- <CoreValueCard theme="dark" /> -->
 </BaseLayout>
