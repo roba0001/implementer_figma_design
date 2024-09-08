@@ -1,0 +1,65 @@
+---
+import "../styles/global.css";
+---
+
+<section>
+  <div>
+    <h5>Subscribe Our Newsletter</h5>
+    <p>Build stronger Customer Relationships with Consultalk</p>
+  </div>
+
+  <div class="input">
+    <input type="text" id="mail" name="mailadress" placeholder="your mail address" />
+    <input type="submit" id="subscribe" value="Subscribe" />
+  </div>
+</section>
+
+<style>
+  .input {
+    display: flex;
+  }
+  section {
+    width: minmax(30rem, 75rem);
+    height: 15.75rem;
+    flex-shrink: 0;
+    background-color: var(--dark);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8.8125rem;
+    place-content: center;
+    border-radius: 1.875rem;
+    padding: 5.5rem;
+
+    & * &:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5rem;
+    }
+  }
+
+  h5,
+  p {
+    color: var(--white);
+  }
+
+  #mail {
+    display: inline-flex;
+    padding: 1.375rem 9.6875rem 1.375rem 2.0625rem;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 3.375rem;
+    border: 1px solid var(--light);
+
+    background: var(--white);
+  }
+
+  #subscribe {
+    display: inline-flex;
+    padding: 0.9375rem 2.8125rem;
+    align-items: flex-start;
+    gap: 0.625rem;
+    border-radius: 2.625rem;
+    background: var(--yellow);
+  }
+</style>
