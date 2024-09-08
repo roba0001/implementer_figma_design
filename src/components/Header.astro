@@ -1,0 +1,151 @@
+---
+import "../styles/global.css";
+import "../styles/reset.css";
+---
+
+<div class="header_flex">
+  <a href="/index.html" class="logo">AskExperts</a>
+
+  <div class="links">
+    <a href="/index.html">Home</a>
+    <a href="/case_study.html">Case Study</a>
+    <a href="/team.html">Team</a>
+    <a href="/about.html">About</a>
+  </div>
+  <button class="popup_trigger" popovertarget="popup">Login</button>
+
+  <div popover id="popup">
+    <div class="login">
+      <h3>Dashboard Login</h3>
+
+      <input type="text" id="email" name="enteremail" placeholder="Enter Email" />
+      <input type="text" id="password" name="enterpassword" placeholder="Enter Password" />
+
+      <input type="submit" id="popup_submit" value="Go to dashboard" />
+    </div>
+  </div>
+</div>
+
+<style>
+  .header_flex {
+    display: flex;
+    width: 100%;
+    padding: 2.375rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: rgba(27, 27, 27, 0.91);
+    backdrop-filter: blur(10.5px);
+  }
+
+  .logo {
+    color: var(--white);
+    font-family: Cabin;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 105%; /* 1.96875rem */
+  }
+
+  .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    a {
+      color: var(--white);
+      font-family: Lato;
+      font-size: 1.108rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 1.77281rem */
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  button {
+    display: flex;
+    padding: 0.25rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 1.25rem;
+    background: var(--yellow);
+    color: var(--dark);
+  }
+
+  /* #popup {
+    display: inline-flex;
+    min-width: 46.875rem;
+    padding: 2.5rem 3.75rem 3.75rem 3.75rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.625rem;
+    border-radius: 1.875rem;
+    background: #181818;
+  } */
+
+  #popup {
+    border-radius: 1.875rem;
+    color: var(--dark);
+  }
+
+  .login {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+
+    padding: 2.5rem 3.75rem 3.75rem 3.75rem;
+    border-radius: 1.875rem;
+    background: var(--dark);
+
+    min-width: 46.875rem;
+    align-items: center;
+    gap: 2rem;
+
+    h3 {
+      color: var(--white);
+    }
+  }
+
+  #popup::backdrop {
+    background: #0004;
+    backdrop-filter: blur(4px);
+  }
+
+  #popup_submit {
+    display: flex;
+    padding: 0.9375rem 3.5rem;
+    align-items: flex-start;
+    gap: 0.625rem;
+    border-radius: 2.625rem;
+    background: var(--yellow);
+  }
+  #email,
+  #password {
+    display: flex;
+    width: 23.875rem;
+    padding: 1.5rem 2.0625rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+    border-radius: 3.375rem;
+    border: 1px solid var(--light);
+
+    background: var(--white);
+    color: var(--dark);
+  }
+</style>
+
+<script>
+  //   document.querySelector(".popup_trigger").addEventListener("mousedown", showPopup);
+  //   function showPopup() {
+  //     console.log("showPopup");
+
+  //   }
+</script>
