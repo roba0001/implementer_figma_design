@@ -3,9 +3,8 @@ import "../styles/global.css";
 const { title = "" } = Astro.props;
 ---
 
-<button class="default_dark">hej</button>
-<button class="default_yellow">hej 2</button>
-<!-- {title} -->
+<button>{title}</button>
+
 <style>
   button {
     padding: 1rem 2.0625rem;
