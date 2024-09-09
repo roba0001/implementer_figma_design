@@ -3,7 +3,10 @@ import "../styles/global.css";
 ---
 
 <section class="footer">
-  <h5>AskExperts</h5>
+  <div class="after">
+    <h5>AskExperts</h5>
+  </div>
+
   <!-- evt byt ud med ::before -->
   <p>©2022 Consultalk. All rights reserved | Terms of Service | Privacy Policy</p>
 </section>
@@ -26,11 +29,16 @@ import "../styles/global.css";
     background: black;
 
     & * {
-      color: white;
+      color: var(--white);
     }
 
     &:nth-child(1)::after {
+      content: "hej";
+    }
+
+    .after::after {
       content: "";
+      display: block;
       width: 75.001rem;
       height: 0.0625rem;
       background: var(--gray);
