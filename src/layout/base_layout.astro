@@ -46,11 +46,9 @@ const { title = "" } = Astro.props;
 <style>
   body {
     display: grid;
-    grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+    grid-template-columns: [full-start]1fr [content]minmax(0, 1000px) 1fr[full-end];
     grid-template-rows: auto 1fr auto;
-    /* grid-template-columns: 1fr minmax(0, 1000px) 1fr; */
     gap: 1rem;
-    margin-block: 4rem;
 
     > * {
       grid-column: 2;
@@ -60,24 +58,11 @@ const { title = "" } = Astro.props;
       display: grid;
 
       grid-template-columns: subgrid;
-      grid-column: 1/-1;
+      grid-column: full;
 
       > * {
         grid-column: 2;
       }
     }
   }
-
-  /* .header_flex,
-  .content,
-  .footer {
-    display: grid;
-
-    grid-template-columns: subgrid;
-    grid-column: 1/-1;
-
-    > * {
-      grid-column: 2;
-    }
-  } */
 </style>
