@@ -37,14 +37,15 @@ import { Icon } from "astro-icon/components";
 
 <style>
   .grid {
-    display: inline-flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
     gap: 5.125rem;
     margin: 3rem 0;
   }
 
   .img {
-    max-width: 43.0625rem;
+    max-height: 30rem;
     flex-shrink: 0;
     position: relative;
     /* background: src(./public/images/what_to_expect.png) lightgray 50% / cover no-repeat; */
@@ -56,12 +57,20 @@ import { Icon } from "astro-icon/components";
       content: "";
       position: absolute;
       background: var(--green);
-      width: 10.5rem;
-      height: 10.75rem;
+      width: 11rem;
+      height: 9rem;
       top: -30px;
       left: -30px;
       border-radius: 1.25rem;
       z-index: -1;
+    }
+
+    &::after {
+      content: url(/images/pseudo_pattern.png);
+      z-index: -2;
+      position: absolute;
+      top: -55px;
+      left: -61px;
     }
   }
 
@@ -102,5 +111,6 @@ import { Icon } from "astro-icon/components";
     width: 1.23044rem;
     height: 1.23044rem;
     flex-shrink: 0;
+    align-self: center;
   }
 </style>
