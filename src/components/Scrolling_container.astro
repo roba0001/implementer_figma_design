@@ -17,6 +17,8 @@ import { Icon } from "astro-icon/components";
 
     <ul role="list">
       <li>
+        <Icon class="small_icon" name="sheet" />
+
         <h3>The Balance Sheet</h3>
         <p>
           The Balance Sheet is a summary of the assets and liabilities and equity of a business at a
@@ -25,6 +27,8 @@ import { Icon } from "astro-icon/components";
       </li>
 
       <li>
+        <Icon class="small_icon" name="card" />
+
         <h3>Income Statement</h3>
         <p>
           The Income (Profit and Loss) Statement, commonly referred to as the P&L statement,
@@ -34,6 +38,8 @@ import { Icon } from "astro-icon/components";
       </li>
 
       <li>
+        <Icon class="small_icon" name="bank" />
+
         <h3>Financial Plan</h3>
         <p>
           Keep your information current and review the documents on a regular basis (monthly or more
@@ -42,6 +48,8 @@ import { Icon } from "astro-icon/components";
       </li>
 
       <li>
+        <Icon class="small_icon" name="coin" />
+
         <h3>Financial Ratios</h3>
         <p>
           Ratios are useful when comparing your company with the competition on financial
@@ -53,6 +61,15 @@ import { Icon } from "astro-icon/components";
 </main>
 
 <style>
+  [data-icon="tavle"] {
+    height: 4.44144rem;
+    aspect-ratio: 1;
+  }
+  .small_icon {
+    height: 1.625rem;
+    aspect-ratio: 1;
+    align-self: flex-start;
+  }
   :root {
     --content-width: 50rem;
   }
