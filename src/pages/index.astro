@@ -1,10 +1,12 @@
 ---
 // import { Image } from "astro:assets";
 // import daisy from "../assets/images/daisy.jpg";
+import Button from "../components/Button.astro";
 import CoreValueCard from "../components/CoreValue_card.astro";
 import Newsletter from "../components/Newsletter.astro";
 import TeamCard from "../components/Team_card.astro";
 import BaseLayout from "../layout/base_layout.astro";
+import IndexPseudo from "../components/index_pseudo.astro";
 import "../styles/global.css";
 
 const employeeData = await fetch(
@@ -16,6 +18,6 @@ const firstThreeEmployees = employeeData.slice(0, 3);
 
 <BaseLayout title="Home">
   <!-- <Image alt="" src={daisy} format="avif" /> -->
-  <Newsletter />
+  <IndexPseudo />
   <!-- <CoreValueCard theme="dark" /> -->
 </BaseLayout>

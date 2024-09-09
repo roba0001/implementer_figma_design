@@ -9,18 +9,17 @@
 
   /* variabler */
 
-  /* @link https://utopia.fyi/type/calculator?c=375,16,1.25,1200,18,1.333,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  /* @link https://utopia.fyi/type/calculator?c=375,14,1.25,1200,16,1.333,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
   :root {
-    /* font variables */
-    --fsize--1: clamp(0.8rem, 0.78rem + 0.0853vw, 0.844rem);
-    --fsize-0: clamp(1rem, 0.9432rem + 0.2424vw, 1.125rem);
-    --fsize-1: clamp(1.25rem, 1.1365rem + 0.4841vw, 1.4996rem);
-    --fsize-2: clamp(1.5625rem, 1.3641rem + 0.8465vw, 1.999rem);
-    --fsize-3: clamp(1.9531rem, 1.6297rem + 1.38vw, 2.6647rem);
-    --fsize-4: clamp(2.4414rem, 1.9366rem + 2.1539vw, 3.552rem);
-    --fsize-5: clamp(3.0518rem, 2.2867rem + 3.2641vw, 4.7348rem);
-    --fsize-6: clamp(3.8147rem, 2.6798rem + 4.8423vw, 6.3115rem);
+    --fsize--1: clamp(0.7rem, 0.6772rem + 0.0973vw, 0.7502rem);
+    --fsize-0: clamp(0.875rem, 0.8182rem + 0.2424vw, 1rem);
+    --fsize-1: clamp(1.0938rem, 0.985rem + 0.464vw, 1.333rem);
+    --fsize-2: clamp(1.3672rem, 1.181rem + 0.7946vw, 1.7769rem);
+    --fsize-3: clamp(1.709rem, 1.4092rem + 1.2792vw, 2.3686rem);
+    --fsize-4: clamp(2.1362rem, 1.6721rem + 1.9803vw, 3.1573rem);
+    --fsize-5: clamp(2.6703rem, 1.971rem + 2.9836vw, 4.2087rem);
+    --fsize-6: clamp(3.3379rem, 2.305rem + 4.407vw, 5.6102rem);
 
     /* color variables */
     --yellow: #ffcc4a;
@@ -73,7 +72,8 @@
     font-size: var(--fsize-1);
   }
 
-  p {
+  p,
+  li {
     color: var(--gray);
     font-family: Lato;
     font-size: var(--fsize-0);
