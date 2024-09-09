@@ -2,10 +2,11 @@
 import "../styles/global.css";
 ---
 
-<section class="footer">
+<section class="footer full-bleed">
   <div class="after">
     <h5>AskExperts</h5>
   </div>
+  <div class="line_container"><hr /></div>
 
   <!-- evt byt ud med ::before -->
   <p>©2022 Consultalk. All rights reserved | Terms of Service | Privacy Policy</p>
@@ -36,12 +37,23 @@ import "../styles/global.css";
       content: "hej";
     }
 
-    .after::after {
+    hr {
+      background-color: white;
+      width: 1rem;
+      height: 0.0625rem;
+    }
+
+    /* .after::after {
       content: "";
       display: block;
-      width: 75.001rem;
+
       height: 0.0625rem;
       background: var(--gray);
+    } */
+    .line_container {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-column: 1/-1;
     }
   }
 </style>

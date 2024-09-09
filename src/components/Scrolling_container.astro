@@ -58,13 +58,15 @@ import "../styles/global.css";
   main {
     padding-block: 4rem;
     display: grid;
-    grid-template-columns:
+    grid-template-columns: subgrid;
+
+    /* grid-template-columns:
       [full-start]
       1fr
       [content]
       minmax(0, var(--content-width))
       1fr
-      [full-end];
+      [full-end]; */
     column-gap: 1rem;
 
     > * {
