@@ -10,6 +10,7 @@ import BaseLayout from "../layout/base_layout.astro";
 import MainLayout from "../layout/MainLayout.astro";
 import IndexPseudo from "../components/index_pseudo.astro";
 import "../styles/global.css";
+import IndexPseudoGrid from "../components/Index_pseudo_grid.astro";
 
 const employeeData = await fetch(
   "https://raw.githubusercontent.com/roba0001/frontend-design/main/resources/json/employees.json"
@@ -20,24 +21,90 @@ const firstThreeEmployees = employeeData.slice(0, 3);
 
 <!-- <CoreValueCard theme="dark" /> --><!-- <Image alt="" src={daisy} format="avif" /> -->
 <MainLayout title="Home">
-  <!-- <section class="full-bleed"></section> -->
+  <IndexPseudoGrid />
+
+  <section class="full-bleed">
+    <div class="grid_1_1">
+      <div class="left_col">
+        <h2>Adam Buschemia Business Consultant</h2>
+        <p>
+          Get help from Alex Moore, a professional business coach with advanced experience on growth
+          and business scaling.
+        </p>
+        <button>Book a Meeting</button>
+      </div>
+      <div class="img_sarah">
+        <!-- <img src="./public/images/sarah.png" alt="sarah" /> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- <IndexPseudo />
 
   <ScrollingContainer />
-</MainLayout>
+  <Newsletter />
+</MainLayout> -->
 
-<style>
-  section {
-    width: 100%;
-    height: 38.47663rem;
-    background-color: var(--dark);
-  }
-  .full-bleed {
-    grid-column: full;
-    display: grid;
-    grid-template-columns: subgrid;
+  <style>
+    section {
+      width: 100%;
+      height: 38.47663rem;
+      background-color: var(--dark);
 
-    > * {
-      grid-column: content;
+      h2 {
+        color: white;
+      }
     }
-  }
-</style>
+    .full-bleed {
+      grid-column: full;
+      display: grid;
+      grid-template-columns: subgrid;
+
+      > * {
+        grid-column: full;
+      }
+      .grid_1_1 {
+        display: grid;
+        grid-template-columns: 1fr 600px 600px 1fr;
+        /* display: flex; */
+
+        &::before {
+          z-index: 1;
+          content: url(/images/pseudo_pattern.png);
+
+          position: absolute;
+          top: 247px;
+          left: -129px;
+        }
+      }
+    }
+
+    .left_col {
+      grid-column: 2;
+    }
+    .img_sarah {
+      background-image: url(./public/images/sarah.png);
+      grid-column: 3/-1;
+      z-index: 1;
+      &::before {
+        z-index: -2;
+        content: url(/images/pseudo_pattern.png);
+
+        position: absolute;
+        top: 6px;
+        right: 569px;
+      }
+    }
+    button {
+      display: flex;
+      padding: 1rem 1.9375rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 0.625rem;
+      border-radius: 2.625rem;
+      border: 1px solid #ebebeb;
+      background: var(--color-neutrals-100, #fff);
+    }
+  </style>
+</MainLayout>

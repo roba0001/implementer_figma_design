@@ -3,14 +3,9 @@
 @import url("./reset.css") layer(reset);
 
 @layer global {
-  .hide {
-    display: none;
-  }
-
-  /* variabler */
-
   /* @link https://utopia.fyi/type/calculator?c=375,12,1.25,1200,14,1.333,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
+  /* font size */
   :root {
     --fsize--1: clamp(0.6rem, 0.5744rem + 0.1094vw, 0.6564rem);
     --fsize-0: clamp(0.75rem, 0.6932rem + 0.2424vw, 0.875rem);
@@ -20,6 +15,14 @@
     --fsize-4: clamp(1.8311rem, 1.4076rem + 1.8068vw, 2.7627rem);
     --fsize-5: clamp(2.2888rem, 1.6553rem + 2.7032vw, 3.6826rem);
     --fsize-6: clamp(2.861rem, 1.9301rem + 3.9717vw, 4.909rem);
+
+    /* flow space */
+    --flowspace-s: clamp(0.75rem, 0.6932rem + 0.2424vw, 0.875rem);
+    --flowspace-m: clamp(1.125rem, 1.0398rem + 0.3636vw, 1.3125rem);
+    --flowspace-l: clamp(1.5rem, 1.3864rem + 0.4848vw, 1.75rem);
+    --flowspace-xl: clamp(2.25rem, 2.0795rem + 0.7273vw, 2.625rem);
+    --flowspace-2xl: clamp(3rem, 2.7727rem + 0.9697vw, 3.5rem);
+    --flowspace-3xl: clamp(4.5rem, 4.1591rem + 1.4545vw, 5.25rem);
 
     /* color variables */
     --yellow: #ffcc4a;
@@ -50,26 +53,32 @@
 
   h1 {
     font-size: var(--fsize-6);
+    margin-bottom: var(--flowspace-3xl);
   }
 
   h2 {
     font-size: var(--fsize-5);
+    margin-bottom: var(--flowspace-2xl);
   }
 
   h3 {
     font-size: var(--fsize-4);
+    margin-bottom: var(--flowspace-1xl);
   }
 
   h4 {
     font-size: var(--fsize-3);
+    margin-bottom: var(--flowspace-xl);
   }
 
   h5 {
     font-size: var(--fsize-2);
+    margin-bottom: var(--flowspace-l);
   }
 
   h6 {
     font-size: var(--fsize-1);
+    margin-bottom: var(--flowspace-m);
   }
 
   p,
@@ -79,5 +88,6 @@
     font-size: var(--fsize-0);
     font-weight: 400;
     line-height: 1.475; /* 1.475rem */
+    margin-bottom: var(--flowspace-s);
   }
 }
