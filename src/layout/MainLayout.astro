@@ -1,7 +1,7 @@
 ---
+import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import "../styles/global.css";
 
 const { title = "" } = Astro.props;
 ---
@@ -32,6 +32,7 @@ const { title = "" } = Astro.props;
       rel="stylesheet"
     />
   </head>
+
   <body>
     <Header />
 
@@ -46,23 +47,31 @@ const { title = "" } = Astro.props;
 <style>
   body {
     display: grid;
-    grid-template-columns: [full-start]1fr [content]minmax(0, 1000px) 1fr[full-end];
     grid-template-rows: auto 1fr auto;
-    gap: 1rem;
+    grid-template-columns:
+    /* Main grid, full-start, content, full-end */
+      [full-start] 1fr [content-start] minmax(0, 1200px)
+      [content-end] 1fr [full-end];
+    gap: 1rlh;
+  }
+
+  main {
+    grid-column: full;
+    display: grid;
+    grid-template-columns: subgrid;
 
     > * {
-      grid-column: 2;
+      grid-column: content;
     }
+  }
 
-    .full-bleed {
-      display: grid;
+  .full-bleed {
+    grid-column: full;
+    display: grid;
+    grid-template-columns: subgrid;
 
-      grid-template-columns: subgrid;
-      grid-column: full;
-
-      > * {
-        grid-column: 2;
-      }
+    > * {
+      grid-column: content;
     }
   }
 </style>
