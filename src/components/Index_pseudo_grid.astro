@@ -6,7 +6,7 @@ import { Icon } from "astro-icon/components";
 <section>
   <div class="contact">
     <div class="text">
-      <p>Proccess</p>
+      <p class="udhevet_txt">Proccess</p>
       <h2>Contact Us. It’s Easy.</h2>
       <p>
         Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative
@@ -15,29 +15,104 @@ import { Icon } from "astro-icon/components";
     </div>
 
     <div class="info">
-      <div>
+      <div class="flex">
         <Icon class="icon" name="phone" />
-        <div class="flex">
+        <div class="flex_column">
           <p>Call Today</p>
-          <h5>+1 800 100 900</h5>
+          <h6>+1 800 100 900</h6>
         </div>
       </div>
 
-      <div>
+      <div class="flex">
         <Icon class="icon" name="clock" />
-        <div class="flex">
+        <div class="flex_column">
           <p>Monday To Friday</p>
-          <h5>9AM - 5PM</h5>
+          <h6>9AM - 5PM</h6>
         </div>
       </div>
 
-      <div>
+      <div class="flex">
         <Icon class="icon" name="pin" />
-        <div class="flex">
+        <div class="flex_column">
           <p>USA Office</p>
-          <h5>195 Devonshire St Boston, MA 02110</h5>
+          <h6>195 Devonshire St Boston, MA 02110</h6>
         </div>
       </div>
     </div>
   </div>
+  <div class="gallery">
+    <img src="./public/images/c1.png" alt="business lady" />
+    <img src="./public/images/c21.png" alt="business people" />
+    <img src="./public/images/c22.png" alt="business hands" />
+  </div>
 </section>
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5rem 0;
+    gap: 4.3rem;
+  }
+  .info,
+  .flex_column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex_column {
+    justify-content: center;
+  }
+
+  .flex {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .icon {
+    width: 3rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+
+    :first-child {
+      grid-row: 1/-1;
+    }
+  }
+
+  .gallery::before {
+    content: "";
+    position: absolute;
+    background: var(--green);
+    width: 19.1875rem;
+    height: 10.25rem;
+    top: 143%;
+    right: 31%;
+    border-radius: 1.25rem;
+    z-index: -1;
+  }
+
+  .gallery::after {
+    content: url(/images/pseudo_pattern.png);
+    z-index: -2;
+    position: absolute;
+    top: 97%;
+    right: 6%;
+  }
+
+  img {
+    border-radius: 1.25rem;
+  }
+
+  .udhevet_txt {
+    width: auto;
+    padding: 0rem 0.75rem;
+    border-radius: 1.25rem;
+    background: #ffcc4a;
+  }
+</style>

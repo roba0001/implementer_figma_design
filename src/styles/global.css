@@ -53,32 +53,32 @@
 
   h1 {
     font-size: var(--fsize-6);
-    margin-bottom: var(--flowspace-3xl);
+    margin-bottom: var(--flowspace-2xl);
   }
 
   h2 {
     font-size: var(--fsize-5);
-    margin-bottom: var(--flowspace-2xl);
+    margin-bottom: var(--flowspace-1xl);
   }
 
   h3 {
     font-size: var(--fsize-4);
-    margin-bottom: var(--flowspace-1xl);
+    margin-bottom: var(--flowspace-xl);
   }
 
   h4 {
     font-size: var(--fsize-3);
-    margin-bottom: var(--flowspace-xl);
+    margin-bottom: var(--flowspace-l);
   }
 
   h5 {
     font-size: var(--fsize-2);
-    margin-bottom: var(--flowspace-l);
+    margin-bottom: var(--flowspace-m);
   }
 
   h6 {
     font-size: var(--fsize-1);
-    margin-bottom: var(--flowspace-m);
+    margin-bottom: var(--flowspace-s);
   }
 
   p,
