@@ -35,53 +35,54 @@ const firstThreeEmployees = employeeData.slice(0, 3);
         <img src="./public/images/sarah.png" alt="sarah" />
       </div>
     </div>
+    <div class="cards">
+      <section class="card">
+        <div class="text">
+          <h5>Finance & Restructuring</h5>
+          <p>
+            Get help from Alex Moore, a professional business coach with advanced experience on
+            growth and business scaling.
+          </p>
+        </div>
+        <button class="dark_button">Our Services</button>
+      </section>
+
+      <section class="card">
+        <div class="text">
+          <h5>Our Approach</h5>
+          <p>
+            Get help from Alex Moore, a professional business coach with advanced experience on
+            growth and business scaling.
+          </p>
+        </div>
+        <button class="dark_button">Our Services</button>
+      </section>
+
+      <section class="card">
+        <div class="text">
+          <h5>Consultalk Result</h5>
+          <p>
+            Get help from Alex Moore, a professional business coach with advanced experience on
+            growth and business scaling.
+          </p>
+        </div>
+        <button class="dark_button">Our Services</button>
+      </section>
+    </div>
   </section>
-  <div class="cards">
-    <section class="card">
-      <div class="text">
-        <h5>Finance & Restructuring</h5>
-        <p>
-          Get help from Alex Moore, a professional business coach with advanced experience on growth
-          and business scaling.
-        </p>
-      </div>
-      <button class="dark_button">Our Services</button>
-    </section>
 
-    <section class="card">
-      <div class="text">
-        <h5>Our Approach</h5>
-        <p>
-          Get help from Alex Moore, a professional business coach with advanced experience on growth
-          and business scaling.
-        </p>
-      </div>
-      <button class="dark_button">Our Services</button>
-    </section>
-
-    <section class="card">
-      <div class="text">
-        <h5>Consultalk Result</h5>
-        <p>
-          Get help from Alex Moore, a professional business coach with advanced experience on growth
-          and business scaling.
-        </p>
-      </div>
-      <button class="dark_button">Our Services</button>
-    </section>
-  </div>
-
-  <IndexPseudo />
+  <!-- <IndexPseudo />
   <IndexPseudoGrid />
 
   <ScrollingContainer />
-  <Newsletter />
+  <Newsletter /> -->
 </MainLayout>
 
 <style>
   .cards {
     display: flex;
     gap: 1.25rem;
+    grid-row: 2/4;
   }
   .card {
     display: flex;
@@ -128,15 +129,17 @@ const firstThreeEmployees = employeeData.slice(0, 3);
     > * {
       grid-column: full;
     }
-    .grid_1_1 {
-      display: grid;
-      grid-template-columns: 1fr 600px 600px 1fr;
-      /* display: flex; */
-    }
+  }
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 600px 600px 1fr;
+    grid-template-rows: 30rem 8rem 8rem;
+    /* display: flex; */
   }
 
   .left_col {
     grid-column: 2;
+    grid-row: 1/3;
     position: relative;
     padding: 5rem 4rem;
     &::before {
@@ -157,6 +160,8 @@ const firstThreeEmployees = employeeData.slice(0, 3);
   .img_sarah {
     /* background-image: url(./public/images/sarah.png); */
     grid-column: 3/-1;
+    grid-row: 1/3;
+
     z-index: 2;
     position: relative;
     background-size: cover;
