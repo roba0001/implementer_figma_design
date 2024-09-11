@@ -5,8 +5,10 @@ const coreValues = await fetch(
 
 console.log(coreValues);
 
+import CoreValueCard from "../components/CoreValue_card.astro";
+import CoreValues from "../components/CoreValues.astro";
 import BaseLayout from "../layout/base_layout.astro";
 import MainLayout from "../layout/MainLayout.astro";
 ---
 
-<MainLayout title="About" />
+<MainLayout title="About"> <CoreValues /> </MainLayout>

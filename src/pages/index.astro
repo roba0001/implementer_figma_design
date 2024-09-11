@@ -29,7 +29,7 @@ const firstThreeEmployees = employeeData.slice(0, 3);
           Get help from Alex Moore, a professional business coach with advanced experience on growth
           and business scaling.
         </p>
-        <button class="light_button">Book a Meeting</button>
+        <button class="default_white">Book a Meeting</button>
       </div>
       <div class="img_sarah">
         <img src="./public/images/sarah.png" alt="sarah" />
@@ -45,7 +45,7 @@ const firstThreeEmployees = employeeData.slice(0, 3);
           and business scaling.
         </p>
       </div>
-      <button class="dark_button">Our Services</button>
+      <button class="default_dark">Our Services</button>
     </section>
 
     <section class="card">
@@ -56,7 +56,7 @@ const firstThreeEmployees = employeeData.slice(0, 3);
           and business scaling.
         </p>
       </div>
-      <button class="dark_button">Our Services</button>
+      <button class="default_dark">Our Services</button>
     </section>
 
     <section class="card">
@@ -67,7 +67,7 @@ const firstThreeEmployees = employeeData.slice(0, 3);
           and business scaling.
         </p>
       </div>
-      <button class="dark_button">Our Services</button>
+      <button class="default_dark">Our Services</button>
     </section>
   </div>
 
@@ -79,6 +79,23 @@ const firstThreeEmployees = employeeData.slice(0, 3);
 </MainLayout>
 
 <style>
+  button {
+    padding: 1rem 2.0625rem;
+    border-radius: 2.625rem;
+    max-width: auto;
+  }
+
+  .default_dark {
+    background: var(--dark);
+    color: var(--white);
+    border: 1px solid var(--dark);
+
+    &:hover {
+      border: 1px solid var(--dark);
+      background: var(--white);
+      color: var(--dark);
+    }
+  }
   .cards {
     display: flex;
     gap: 1.25rem;
@@ -97,17 +114,6 @@ const firstThreeEmployees = employeeData.slice(0, 3);
   }
   .text * {
     color: var(--white);
-  }
-
-  .dark_button {
-    display: flex;
-    padding: 1rem 1.9375rem;
-    align-items: center;
-    gap: 0.625rem;
-    border-radius: 3.4375rem;
-    background: var(--dark);
-    color: var(--white);
-    border: 1px solid var(--dark);
   }
 
   .hero_img {
@@ -166,16 +172,22 @@ const firstThreeEmployees = employeeData.slice(0, 3);
       width: auto;
     }
   }
-  .light_button {
-    display: flex;
-    padding: 1rem 1.9375rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 0.625rem;
+
+  button {
+    padding: 1rem 2.0625rem;
     border-radius: 2.625rem;
-    border: 1px solid #ebebeb;
-    background: var(--color-neutrals-100, #fff);
+    max-width: auto;
+  }
+  .default_white {
+    background: var(--white);
+    color: var(--dark);
+    border: 1px solid var(--white);
     margin-top: 2rem;
+
+    &:hover {
+      border: 1px solid var(--yellow);
+      background: var(--dark);
+      color: var(--yellow);
+    }
   }
 </style>

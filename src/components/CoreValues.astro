@@ -1,0 +1,75 @@
+---
+import "../styles/global.css";
+import { Icon } from "astro-icon/components";
+---
+
+<section class="full-bleed">
+  <div>
+    <div class="text">
+      <p>Growing with our Clients</p>
+      <h3>Our core values & principles</h3>
+      <p>
+        Capitalize on low hanging fruit to identify a ballpark value added activity beta test.
+        Override the digital divide with additional from DevOps.
+      </p>
+    </div>
+    <button class="default_white">Get in touch</button>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <Icon class="small_icon" name="Ideas" />
+      <h3>Creative Ideas</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec
+        aliquam.
+      </p>
+      <h3>Read More</h3>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="14"
+        viewBox="0 0 16 14"
+        fill="none"
+      >
+        <path
+          d="M1 6.78174H14.068M14.068 6.78174L8.72198 1.43579M14.068 6.78174L8.72198 12.1278"
+          stroke="#141414"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<style>
+  .full-bleed {
+    grid-column: full;
+    display: grid;
+    grid-template-columns: subgrid;
+    /* background: var(--dark); */
+
+    > * {
+      grid-column: content;
+    }
+  }
+
+  button {
+    padding: 1rem 2.0625rem;
+    border-radius: 2.625rem;
+    max-width: auto;
+  }
+
+  .default_white {
+    background: var(--white);
+    color: var(--dark);
+    border: 1px solid var(--white);
+    margin-top: 2rem;
+
+    &:hover {
+      border: 1px solid var(--yellow);
+      background: var(--dark);
+      color: var(--yellow);
+    }
+  }
+</style>
