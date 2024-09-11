@@ -75,10 +75,11 @@ import { Icon } from "astro-icon/components";
   }
 
   .gallery {
-    display: grid;
+    display: inline-grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 1rem;
+    position: relative;
 
     :first-child {
       grid-row: 1/-1;
@@ -91,8 +92,8 @@ import { Icon } from "astro-icon/components";
     background: var(--green);
     width: 19.1875rem;
     height: 10.25rem;
-    top: 143%;
-    right: 31%;
+    bottom: -8%;
+    left: -10%;
     border-radius: 1.25rem;
     z-index: -1;
   }
@@ -101,8 +102,8 @@ import { Icon } from "astro-icon/components";
     content: url(/images/pseudo_pattern.png);
     z-index: -2;
     position: absolute;
-    top: 97%;
-    right: 6%;
+    top: -7%;
+    right: -9%;
   }
 
   img {
@@ -114,5 +115,12 @@ import { Icon } from "astro-icon/components";
     padding: 0rem 0.75rem;
     border-radius: 1.25rem;
     background: #ffcc4a;
+    text-transform: uppercase;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 </style>
