@@ -14,13 +14,14 @@ import { Icon } from "astro-icon/components";
         <a href="/team.html">Team</a>
         <a href="/about.html">About</a>
       </div>
+      <div class="burger_flex">
+        <button class="popup_trigger default_yellow" popovertarget="popup">Login</button>
 
-      <div class="burger">
-        <Icon class="icon" name="burgermenu" />
+        <div class="burger">
+          <Icon class="icon" name="burgermenu" />
+        </div>
       </div>
     </nav>
-    <button class="popup_trigger default_yellow" popovertarget="popup">Login</button>
-
     <div popover id="popup">
       <div class="login">
         <h3>Dashboard Login</h3>
@@ -35,12 +36,16 @@ import { Icon } from "astro-icon/components";
 </div>
 
 <style>
-  .burger {
-    width: 30px;
-    height: 20px;
+  .burger > * {
+    width: 2rem;
+
     cursor: pointer;
   }
 
+  .burger_flex {
+    display: flex;
+    gap: 20px;
+  }
   .burger .line {
     width: 100%;
     height: 2px;
@@ -178,6 +183,10 @@ import { Icon } from "astro-icon/components";
     color: var(--dark);
   }
 
+  nav {
+    display: contents;
+  }
+
   @media screen and (max-width: 800px) {
     .menu,
     .links {
@@ -189,38 +198,23 @@ import { Icon } from "astro-icon/components";
     .burger {
       display: block;
       color: var(--yellow);
-      order: 3;
-      position: absolute;
-    }
-    .burger.active .line:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px);
-      transition: 0.2s linear;
     }
 
-    .burger.active .line:nth-child(2) {
-      opacity: 0;
-      transition: 0.15s linear;
-    }
-
-    .burger.active .line:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -5px);
-      transition: 0.2s linear;
-    }
-
-    nav.active .menu {
-      display: block;
-      background-color: var(--secondary);
+    .active .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 4.5rem;
+      background-color: var(--white);
       opacity: 100%;
       position: absolute;
-      top: 70px;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
+      right: 0;
+      width: 60%;
     }
 
-    nav.active .menu li {
+    .active .menu a {
       margin: 10px 10%;
+      color: var(--dark);
     }
   }
   .full-bleed {
@@ -235,9 +229,22 @@ import { Icon } from "astro-icon/components";
 </style>
 
 <script>
-  //   document.querySelector(".popup_trigger").addEventListener("mousedown", showPopup);
-  //   function showPopup() {
-  //     console.log("showPopup");
+  // Burgermenu  fra på fronter
 
-  //   }
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav");
+  const menu = document.querySelector(".menu");
+  const links = document.querySelectorAll(".menu li a");
+
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      burger.classList.remove("active");
+      nav.classList.remove("active");
+    });
+  });
 </script>
