@@ -46,14 +46,11 @@ const { title = "" } = Astro.props;
 
 <style>
   body {
-    overflow-x: hidden;
-    overflow-y: scroll;
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns:
-    /* Main grid, full-start, content, full-end */
-      [full-start] 1fr [content-start] minmax(0, 1200px)
-      [content-end] 1fr [full-end];
+      [full-start] 1fr [content] minmax(0, 1200px)
+      1fr [full-end];
   }
 
   main {
@@ -65,7 +62,6 @@ const { title = "" } = Astro.props;
       grid-column: content;
     }
   }
-
   .full-bleed {
     grid-column: full;
     display: grid;
