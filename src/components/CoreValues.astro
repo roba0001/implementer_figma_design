@@ -24,7 +24,7 @@ import { Icon } from "astro-icon/components";
         aliquam.
       </p>
       <div class="readmore">
-        <a href="#"><h5>Read More</h5></a>
+        <a href="#"><h6>Read More</h6></a>
         <svg
           class="pil"
           xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ import { Icon } from "astro-icon/components";
       <h5>Best Features</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <div class="readmore">
-        <a href="#"><h5>Read More</h5></a>
+        <a href="#"><h6>Read More</h6></a>
         <svg
           class="pil"
           xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ import { Icon } from "astro-icon/components";
         aliquam.
       </p>
       <div class="readmore">
-        <a href="#"><h5>Read More</h5></a>
+        <a href="#"><h6>Read More</h6></a>
         <svg
           class="pil"
           xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@ import { Icon } from "astro-icon/components";
       <h5>Easy Solutions</h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <div class="readmore">
-        <a href="#"><h5>Read More</h5></a>
+        <a href="#"><h6>Read More</h6></a>
         <svg
           class="pil"
           xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +150,7 @@ import { Icon } from "astro-icon/components";
       width: auto;
       padding: 0rem 0.75rem;
       border-radius: 1.25rem;
-      background: #ffcc4a;
+      background: var(--yellow);
       text-transform: uppercase;
       color: var(--dark);
       align-self: flex-start;
@@ -166,10 +166,10 @@ import { Icon } from "astro-icon/components";
   }
   .card {
     width: 17rem;
+    height: fit-content;
     border-radius: 1.25rem;
     border: 1px solid var(--light);
     padding: 2.25rem 1.4375rem;
-
     background: var(--light);
 
     p {
@@ -179,9 +179,10 @@ import { Icon } from "astro-icon/components";
 
   .readmore {
     display: flex;
+    align-items: center;
     gap: 0.6rem;
 
-    h5 {
+    h6 {
       margin-bottom: 0;
       align-self: flex-end;
     }

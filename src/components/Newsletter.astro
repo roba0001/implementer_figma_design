@@ -39,18 +39,42 @@ import Button from "../components/Button.astro";
     gap: 1rem;
   }
   section {
+    position: relative;
+    z-index: -1;
     align-items: center;
     place-content: center;
     width: minmax(30rem, 75rem);
     max-height: 15.75rem;
     background-color: var(--dark);
-    /* display: grid;
-    grid-template-columns: auto 1fr; */
+    margin: 8.3rem 0;
     gap: 1.813rem;
     border-radius: 1.875rem;
     padding: 5.5rem;
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: var(--green);
+      width: 14.16294rem;
+      height: 17.80919rem;
+      transform: rotate(135deg);
+      bottom: -85%;
+      right: -6%;
+      border-radius: 1.25rem;
+      z-index: 2;
+    }
+
+    &::after {
+      content: url(/images/pseudo_pattern.png);
+      z-index: 1;
+      position: absolute;
+      top: -32%;
+      right: -9%;
+      transform: rotate(225deg);
+    }
   }
 
   .text {

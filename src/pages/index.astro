@@ -11,6 +11,8 @@ import MainLayout from "../layout/MainLayout.astro";
 import IndexPseudo from "../components/index_pseudo.astro";
 import "../styles/global.css";
 import IndexPseudoGrid from "../components/Index_pseudo_grid.astro";
+import IndexAnimation from "../components/IndexAnimation.astro";
+import CoreValues from "../components/CoreValues.astro";
 
 const employeeData = await fetch(
   "https://raw.githubusercontent.com/roba0001/frontend-design/main/resources/json/employees.json"
@@ -19,7 +21,6 @@ const employeeData = await fetch(
 const firstThreeEmployees = employeeData.slice(0, 3);
 ---
 
-<!-- <CoreValueCard theme="dark" /> --><!-- <Image alt="" src={daisy} format="avif" /> -->
 <MainLayout title="Home">
   <section class="hero_img full-bleed">
     <div class="grid_1_1">
@@ -72,9 +73,11 @@ const firstThreeEmployees = employeeData.slice(0, 3);
   </div>
 
   <IndexPseudo />
+  <ScrollingContainer />
+  <IndexAnimation />
+  <CoreValues />
   <IndexPseudoGrid />
 
-  <ScrollingContainer />
   <Newsletter />
 </MainLayout>
 
