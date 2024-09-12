@@ -45,10 +45,10 @@ import { Icon } from "astro-icon/components";
   }
 
   .img {
-    max-height: 30rem;
+    width: 43.0625rem;
     flex-shrink: 0;
     position: relative;
-    /* background: src(./public/images/what_to_expect.png) lightgray 50% / cover no-repeat; */
+    margin: inherit;
 
     & img {
       border-radius: 1.25rem;
@@ -76,12 +76,15 @@ import { Icon } from "astro-icon/components";
 
   li {
     list-style: none;
+    margin-bottom: 0;
   }
 
   .flex {
     display: flex;
+    height: auto;
     padding: 0;
     gap: 1.25rem;
+    align-items: center;
 
     &:nth-child(1) {
       margin-bottom: 1.12rem;
@@ -96,8 +99,6 @@ import { Icon } from "astro-icon/components";
   .text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
   }
 
   .udhevet_txt {
@@ -112,6 +113,5 @@ import { Icon } from "astro-icon/components";
     width: 1.23044rem;
     height: 1.23044rem;
     flex-shrink: 0;
-    align-self: center;
   }
 </style>
