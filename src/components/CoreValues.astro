@@ -23,27 +23,108 @@ import { Icon } from "astro-icon/components";
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec
         aliquam.
       </p>
-      <h5>Read More</h5>
-      <svg
-        class="pil"
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="14"
-        viewBox="0 0 16 14"
-        fill="none"
-      >
-        <path
-          d="M1 6.78174H14.068M14.068 6.78174L8.72198 1.43579M14.068 6.78174L8.72198 12.1278"
-          stroke="#141414"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-      </svg>
+      <div class="readmore">
+        <a href="#"><h5>Read More</h5></a>
+        <svg
+          class="pil"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="14"
+          viewBox="0 0 16 14"
+          fill="none"
+        >
+          <path
+            d="M1 6.78174H14.068M14.068 6.78174L8.72198 1.43579M14.068 6.78174L8.72198 12.1278"
+            stroke="#141414"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card">
+      <Icon class="small_icon" name="features" />
+      <h5>Best Features</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="readmore">
+        <a href="#"><h5>Read More</h5></a>
+        <svg
+          class="pil"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="14"
+          viewBox="0 0 16 14"
+          fill="none"
+        >
+          <path
+            d="M1 6.78174H14.068M14.068 6.78174L8.72198 1.43579M14.068 6.78174L8.72198 12.1278"
+            stroke="#141414"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card">
+      <Icon class="small_icon" name="experience" />
+      <h5>Experience</h5>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec
+        aliquam.
+      </p>
+      <div class="readmore">
+        <a href="#"><h5>Read More</h5></a>
+        <svg
+          class="pil"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="14"
+          viewBox="0 0 16 14"
+          fill="none"
+        >
+          <path
+            d="M1 6.78174H14.068M14.068 6.78174L8.72198 1.43579M14.068 6.78174L8.72198 12.1278"
+            stroke="#141414"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </div>
+    </div>
+
+    <div class="card">
+      <Icon class="small_icon" name="solutions" />
+      <h5>Easy Solutions</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="readmore">
+        <a href="#"><h5>Read More</h5></a>
+        <svg
+          class="pil"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="14"
+          viewBox="0 0 16 14"
+          fill="none"
+        >
+          <path
+            d="M1 6.78174H14.068M14.068 6.78174L8.72198 1.43579M14.068 6.78174L8.72198 12.1278"
+            stroke="#141414"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
+  section {
+    padding: 6rem 0;
+    gap: 2rem;
+  }
   .full-bleed {
     grid-column: full;
     display: grid;
@@ -79,14 +160,36 @@ import { Icon } from "astro-icon/components";
     }
   }
 
+  .cards {
+    display: flex;
+    gap: 2.25rem;
+  }
   .card {
+    width: 17rem;
     border-radius: 1.25rem;
     border: 1px solid var(--light);
+    padding: 2.25rem 1.4375rem;
 
     background: var(--light);
 
     p {
       color: var(--dark);
+    }
+  }
+
+  .readmore {
+    display: flex;
+    gap: 0.6rem;
+
+    h5 {
+      margin-bottom: 0;
+      align-self: flex-end;
+    }
+    a {
+      text-decoration: none;
+      :hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -113,6 +216,7 @@ import { Icon } from "astro-icon/components";
   }
 
   .pil {
-    height: 1rem;
+    width: 1.25rem;
+    align-self: center;
   }
 </style>
