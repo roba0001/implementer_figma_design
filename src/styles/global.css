@@ -7,8 +7,7 @@
 
   /* font size */
   :root {
-    --fsize--1: clamp(0.6rem, 0.5744rem + 0.1094vw, 0.6564rem);
-    --fsize-0: clamp(0.75rem, 0.6932rem + 0.2424vw, 0.875rem);
+    --fsize-0: clamp(0.8125rem, 0.7557rem + 0.2424vw, 0.9375rem);
     --fsize-1: clamp(0.9375rem, 0.8335rem + 0.4439vw, 1.1664rem);
     --fsize-2: clamp(1.1719rem, 0.9978rem + 0.7426vw, 1.5548rem);
     --fsize-3: clamp(1.4648rem, 1.1886rem + 1.1785vw, 2.0725rem);

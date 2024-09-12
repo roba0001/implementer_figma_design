@@ -3,9 +3,8 @@ import "../styles/global.css";
 ---
 
 <section class="footer full-bleed">
-  <div class="after">
-    <h5>AskExperts</h5>
-  </div>
+  <h5>AskExperts</h5>
+
   <div class="line_container"><hr /></div>
 
   <!-- evt byt ud med ::before -->
@@ -14,14 +13,18 @@ import "../styles/global.css";
 
 <style>
   .full-bleed {
-    grid-column: full;
     display: grid;
     grid-template-columns: subgrid;
+    grid-column: full;
 
     > * {
       grid-column: content;
     }
+    .line_container {
+      grid-column: full;
+    }
   }
+
   body {
     min-height: 100vh;
     display: flex;
@@ -29,7 +32,7 @@ import "../styles/global.css";
   }
   .footer {
     margin-top: auto;
-    display: flex;
+    /* display: flex; */
     width: 100%;
     padding: 2.875rem 0rem;
     flex-direction: column;
@@ -42,27 +45,17 @@ import "../styles/global.css";
       color: var(--white);
     }
 
-    &:nth-child(1)::after {
-      content: "hej";
-    }
-
-    hr {
-      background-color: white;
-      width: 1rem;
-      height: 0.0625rem;
-    }
-
-    /* .after::after {
-      content: "";
-      display: block;
-
-      height: 0.0625rem;
-      background: var(--gray);
-    } */
     .line_container {
-      display: grid;
-      grid-template-columns: subgrid;
-      grid-column: 1/-1;
+      grid-column: content;
+      hr {
+        background-color: white;
+        height: 0.0625rem;
+      }
+    }
+
+    h5,
+    p {
+      margin: auto;
     }
   }
 </style>
